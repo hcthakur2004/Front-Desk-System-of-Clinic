@@ -104,7 +104,7 @@ const LoginPage: React.FC = () => {
               {isLoading ? <CircularProgress size={24} /> : 'Sign In'}
             </Button>
             <Grid container justifyContent="flex-end">
-              <Grid item>
+              <Grid size="grow">
                 <Link component={RouterLink} to="/register" variant="body2">
                   Don't have an account? Sign Up
                 </Link>

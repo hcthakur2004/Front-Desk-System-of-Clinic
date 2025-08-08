@@ -6,7 +6,6 @@ import {
   Typography,
   Card,
   CardContent,
-  CardHeader,
   List,
   ListItem,
   ListItemText,
@@ -133,7 +132,7 @@ const DashboardPage: React.FC = () => {
 
       {/* Stats Cards */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <StatCard
             title="Doctors"
             value={stats.doctors}
@@ -141,7 +140,7 @@ const DashboardPage: React.FC = () => {
             color="#1976d2"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <StatCard
             title="Patients"
             value={stats.patients}
@@ -149,7 +148,7 @@ const DashboardPage: React.FC = () => {
             color="#2e7d32"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <StatCard
             title="Appointments"
             value={stats.appointments}
@@ -157,7 +156,7 @@ const DashboardPage: React.FC = () => {
             color="#ed6c02"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <StatCard
             title="In Queue"
             value={stats.queueEntries}
@@ -169,7 +168,7 @@ const DashboardPage: React.FC = () => {
 
       {/* Today's Appointments and Current Queue */}
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Paper sx={{ p: 2, height: '100%' }}>
             <Typography variant="h6" gutterBottom>
               Today's Appointments
@@ -214,7 +213,7 @@ const DashboardPage: React.FC = () => {
             )}
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <Paper sx={{ p: 2, height: '100%' }}>
             <Typography variant="h6" gutterBottom>
               Current Queue

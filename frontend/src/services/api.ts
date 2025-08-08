@@ -1,7 +1,7 @@
 import axios from 'axios';
 import type { LoginCredentials, RegisterData } from '../types';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://front-desk-system-of-clinic-backend.onrender.com';
 
 const api = axios.create({
   baseURL: API_URL,

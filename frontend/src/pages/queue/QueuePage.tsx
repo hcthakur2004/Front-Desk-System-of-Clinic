@@ -96,7 +96,7 @@ const QueuePage: React.FC = () => {
     setOpenDialog(false);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | { name?: string; value: unknown }>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | { target: { name?: string; value: unknown } }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -211,7 +211,7 @@ const QueuePage: React.FC = () => {
       {/* Queue Cards View */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
         {/* Waiting Queue */}
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Paper sx={{ p: 2, height: '100%', bgcolor: '#f5f5f5' }}>
             <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center' }}>
               <Chip label={waitingQueue.length} color="primary" size="small" sx={{ mr: 1 }} />
@@ -268,7 +268,7 @@ const QueuePage: React.FC = () => {
         </Grid>
 
         {/* With Doctor Queue */}
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Paper sx={{ p: 2, height: '100%', bgcolor: '#fff8e1' }}>
             <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center' }}>
               <Chip label={withDoctorQueue.length} color="warning" size="small" sx={{ mr: 1 }} />
@@ -323,7 +323,7 @@ const QueuePage: React.FC = () => {
         </Grid>
 
         {/* Completed Queue */}
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Paper sx={{ p: 2, height: '100%', bgcolor: '#e8f5e9' }}>
             <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center' }}>
               <Chip label={completedQueue.length} color="success" size="small" sx={{ mr: 1 }} />

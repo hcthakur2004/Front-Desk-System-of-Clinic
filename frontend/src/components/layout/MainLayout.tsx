@@ -35,22 +35,18 @@ interface MainLayoutProps {
 }
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }: { theme: any; open: boolean }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: 0,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
+  ({ open }: { open: boolean }) => {
+    return {
+      flexGrow: 1,
+      padding: '24px',
+      transition: 'margin 225ms cubic-bezier(0.4, 0, 0.6, 1) 0ms',
+      marginLeft: 0,
+      ...(open && {
+        transition: 'margin 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms',
+        marginLeft: `${drawerWidth}px`,
       }),
-      marginLeft: `${drawerWidth}px`,
-    }),
-  }),
+    };
+  }
 );
 
 const MainLayout: React.FC<MainLayoutProps> = ({ window }) => {

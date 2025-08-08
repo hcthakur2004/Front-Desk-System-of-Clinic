@@ -115,7 +115,7 @@ const RegisterPage: React.FC = () => {
               {isLoading ? <CircularProgress size={24} /> : 'Sign Up'}
             </Button>
             <Grid container justifyContent="flex-end">
-              <Grid item>
+              <Grid size="grow">
                 <Link component={RouterLink} to="/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
