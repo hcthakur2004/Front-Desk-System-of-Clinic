@@ -1,0 +1,108 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --background-gradient: linear-gradient(135deg, #f3f4f6, #e0f2fe);
+  --text-color: #374151;
+  --card-bg: rgba(255, 255, 255, 0.6);
+  --border-radius: 15px;
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --backdrop-blur: blur(15px);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-gradient);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+.login-container {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: var(--text-color);
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.3);
+  background: white;
+}
+
+button {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.03);
+}
+
+.demo-credentials {
+  background: rgba(219, 234, 254, 0.7);
+  border-left: 4px solid var(--primary-color);
+  padding: 0.8rem;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  color: var(--text-color);
+}
