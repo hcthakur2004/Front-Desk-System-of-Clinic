@@ -1,4 +1,4 @@
-# Hospital Management System
+# Front Desk System at a clinic
 
 A comprehensive hospital management system built with NestJS (backend) and React (frontend). This system helps hospitals manage doctors, patients, appointments, and patient queues efficiently.
 
